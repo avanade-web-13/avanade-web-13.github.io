@@ -1,0 +1,160 @@
+<!DOCTYPE html> <!-- tag do navegador, informa qual a linguaguem que vai ser renderizada-->
+<html lang="pt-br"> 
+<!-- elemento ancestral é a primeira tag
+    toda tag tem que estar entre < > 
+    o html possui 2 "filhos" - head e body
+ -->
+    <head>
+        <meta charset="UTF-8" />
+        <title>Curso HTML5, CSS3 e JavaScript</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <style type="text/css" >
+
+            div.container /*seletor tag */ {
+                width : 100%; /* propriedade : (separador), valor ; (final da linha) = declaração CSS */
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: linear-gradient(rgba(0,0,0,0.4) 70%, rgba(0,0,0,0.2));
+                padding: 10%;
+                text-align: center;
+            }
+
+            /* 
+                estrutura CSS
+                box-sizing: border-box
+                box-model = 4 lados: Top, Right, Bottom e Left
+
+                Bottom 4 camadas = margin (em volta do elemento), border, padding (espaço dentro do elemento), content (conteúdo do elemento)
+            */
+
+            /* w3c - world wide web consortium - consorcio
+            Sir Tim Berners-Lee
+            HTML, CSS
+
+            ECMA International - TC39 - EcmaScript
+            JS
+            */
+            body /*seletor tag */{
+                margin: 0;
+                padding: 0;
+            }
+
+            * {
+                box-sizing: border-box;
+                /* global styles */
+            }
+
+            h1, 
+            h2, 
+            h3, 
+            h4, 
+            h5, 
+            h6 /*seletor tag */ {
+                margin: 0;
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                color: #555;
+            }
+
+            /* quanto mais específico mais importante*/
+            body>div>h1.titulo {
+                color: red;
+            }
+
+            body>div.container>h1.titulo /*seletor tag */ {
+                font-size: 3em;
+                color: #fff !important /* ele sobrescreve a importancia do site, ele é muito usado quando o conteúdo dinânmico é usado */;
+            }
+
+            h2.titulo /*seletor tag */ {
+                font-size: 1.5em;
+                margin-top: 5%;
+                color: #fff;
+            }
+
+            /* Daqui para cima é tudo mobile em diante */
+            body {
+                background: url("assets/images/background-mobile.webp") no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            /*mediaquerie */          
+            /* tablet */
+            @media (min-width:768px) {
+                body {
+                    background: url("assets/images/background-tablet.webp") no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                }
+            }
+
+            /* desktop */
+            @media (min-width: 1280px) {
+                body {
+                    background: url("assets/images/background-desktop.webp") no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                }
+            }
+
+            /* Extra Large - iMac 27" */
+            @media (min-width: 1680px) {
+
+                h1.titulo {
+                    font-size: 3em;
+                }
+
+                h2.titulo {
+                    font-size: 2em;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="titulo">
+                Seja bem vindo(a) ao curso HTML5, CSS3 e JavaScript
+                <!-- só pode ter um por página ou por sessão -->
+            </h1>
+            <h2 class="titulo">
+                Estamos estudando no momento: <i>HTML5</i>
+            </h2>
+        </div>
+        <!-- div, section, nav, header, footer, aside, article, main todos são elementos de bloco-->
+    </body>
+
+</html>
+
+<!-- Dicas para criar um site profissional:
+    1 - fontes - use uma fonte diferente da fonte padrão do navegador
+    2 - sempre que possível evite o negrito (diminua o pesso delas)
+    3 - fuja da cor preta e das cores primarias
+    4 - utilizar imagens de alta definição
+-->
+
+<!--
+    sempre que for vetor você vai usar o formato svg, só não pode usar se for colorido ou com muitas cores
+    se for uma imagem, usar o formato webp, mas antes de usar esse formato comprimir o jpg 
+        arrastar a imagem para o Figma, clicar no 
+        Frame - Design - Desktop (1920 - 1080), 
+        Frame - Tablet 
+        Frame - IPhone 
+
+        CTRL+D - duplica a imagem
+        É necessário clicar 2x para selecionar só a imagem, clicar em export, mudar para jpg e salvar
+        Para comprimir a imagem é possível utilizar o site - https://tinypng.com/
+        Depois disso precisamos converter para webp - https://convertio.co/pt/
+
+
+-->

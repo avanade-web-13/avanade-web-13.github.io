@@ -1,0 +1,19 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch ./assets/scss:./assets/css --style compressed --no-source-map",
+    "git": "git add --all && git commit -m 'Deploy' && git push origin master"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+// git initi - inicia o git
+//git remote - mostra sua se vocÊ tem algum repositório no github
+// git remot add +nome + url do git - vai criar um repositorio no git
+//git remote -v - mostra o caminho para onde ele está sendo encaminhado
+
