@@ -4,6 +4,7 @@ body{
     width: 100%;
 //    height: calc(100vh - 100px - 100px);
     display: flex;
+    flex-direction: column;
     & > header {
         position: fixed;
         top: 0;
@@ -31,6 +32,12 @@ body{
                 }
              }
         }
+
+        &.footer-link-a{
+            > nav > ul > li > a {
+                color: #fff;
+            }
+        }
     }
 }
 
@@ -40,7 +47,7 @@ button.disabled{
 }
 
 button.disabled:hover{
-    border: rgba(36,36,36, 0.8);
+    border: rgba(36,36,36, 0.2);
 }
 
 button {
