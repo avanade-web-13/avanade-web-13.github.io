@@ -61,3 +61,13 @@ let soma2 = function (a, b){
 
 //new soma(50,20); //not constructor.
 new soma2(50,20);
+
+/**
+ * Área que devemos controlar no JS
+ * Array
+ * Assíncrono
+ * Funções
+ * Eventos
+ * Objetos
+ * Estrutura de Controle e loops
+ */
